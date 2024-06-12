@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    
+    
+    
+    
+    
+    <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        </style>
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo"><a href="index.html"><img class="log1" src="img/WhatsApp_Image_2024-06-11_at_14.52.24-removebg-preview.png" alt=""></a></div>
+        
+    
+        <nav class="nav">
+            <a href="#" id="loginButton">Iniciar Sesión</a>
+            <a href="#" id="registerButton">Registrarse</a>
+            <div id="userMenu" class="user-menu" style="display: none;">
+                <span id="welcomeMessage"></span>
+                <div class="dropdown-content">
+                    <a href="#" id="logoutButton">Cerrar Sesión</a>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+  
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Buscar productos...">
+        <button onclick="searchProducts()">Buscar</button>
+    </div>
+
+</header>
+
+
+<section>
+    <div class="product-list">
+        
+        
+        <div class="product" data-id="1" data-category="electronicos">
+            <img class="imgf" src="https://http2.mlstatic.com/D_NQ_NP_2X_732057-MLA70868353813_082023-F.webp" alt="Producto 1">
+            <div class="name">Samsung Galaxy A54 5G 256 GB Awesome graphite 8 GB RAM</div>
+            <div class="price">$874.999</div>
+            <button class="but1" onclick="addToCart(1, 'Samsung Galaxy A54 5G 256 GB Awesome graphite 8 GB RAM', 874.999)">Añadir al Carro</button>
+        </div>
+        <div class="product" data-id="2" data-category="moda">
+            <img class="imgf" src="https://http2.mlstatic.com/D_NQ_NP_2X_779780-MLA52130203317_102022-F.webp" alt="Producto 2">
+            <div class="name">Samsung E1272 Dual SIM 32 MB rojo 64 MB RAM</div>
+            <div class="price">$37.000</div>
+            <button class="but1" onclick="addToCart(2, 'Samsung E1272 Dual SIM 32 MB rojo 64 MB RAM', 37.000)">Añadir al Carro</button>
+        </div>
+        <div class="product" data-id="2" data-category="moda">
+            <img class="imgf" src="https://http2.mlstatic.com/D_NQ_NP_973878-MLA51718020188_092022-O.webp" alt="Producto 2">
+            <div class="name">Samsung Galaxy Z Flip4 5G 5G 128 GB graphite 8 GB RAM</div>
+            <div class="price">$1.014.401</div>
+            <button class="but1" onclick="addToCart(2, 'Samsung Galaxy Z Flip4 5G 5G 128 GB graphite 8 GB RAM', 1014401)">Añadir al Carro</button>
+        </div>
+        <div class="product" data-id="2" data-category="moda">
+            <img class="imgf" src=https://http2.mlstatic.com/D_NQ_NP_748098-MLU75806266862_042024-O.webp" alt="Producto 2">
+            <div class="name">Smart Tv Samsung 50 Un50cu7000gczb Led 4k</div>
+            <div class="price">$679.999</div>
+            <button class="but1" onclick="addToCart(2, 'Smart Tv Samsung 50  Led 4k', 679999)">Añadir al Carro</button>
+        </div>
+        <div class="product" data-id="2" data-category="moda">
+            <img class="imgf" src="https://http2.mlstatic.com/D_NQ_NP_2X_739722-MLU76329284914_052024-F.webp" alt="Producto 2">
+            <div class="name">Torre De Sonido Samsung Mx-t70 1500w Color Negro</div>
+            <div class="price">$99.990</div>
+            <button class="but1" onclick="addToCart(2, 'Torre De Sonido Samsung Mx-t70 1500w Color Negro', 99990)">Añadir al Carro</button>
+        </div>
+        <div class="product" data-id="2" data-category="moda">
+            <img class="imgf" src="https://http2.mlstatic.com/D_NQ_NP_809458-MLU74112997662_012024-O.webp" alt="Producto 2">
+            <div class="name">Auriculares Samsung Galaxy Buds2 Pro SM-R510 Anc Bluetooth 5.3 Ipx7 Color Graphite Color de la luz Blanco</div>
+            <div class="price">$35.990</div>
+            <button class="but1" onclick="addToCart(2, 'HondaAuriculares Samsung Galaxy Buds2 Pro', 35990)">Añadir al Carro</button>
+        </div>
+        <div class="product" data-id="2" data-category="moda">
+            <img class="imgf" src="https://http2.mlstatic.com/D_NQ_NP_624136-MLU72675207276_112023-O.webp" alt="Producto 2">
+            <div class="name">Notebook Samsung Galaxy Np750 Book3 15.6, procesador I7 Intel I7, 16gb 512gb 10 nucleo</div>
+            <div class="price">$1.959.999</div>
+            <button class="but1" onclick="addToCart(2, 'Notebook Samsung Galaxy Np750', 1959999)">Añadir al Carro</button>
+        </div>
+        <div class="product" data-id="2" data-category="moda">
+            <img class="imgf" src="https://http2.mlstatic.com/D_NQ_NP_843829-MLU72646996287_112023-O.webp" alt="Producto 2">
+            <div class="name">Monitor Led Samsung 22'' Con Diseño Sin Bordes - Lf22t35 Color Negro</div>
+            <div class="price">$228.799</div>
+            <button class="but1" onclick="addToCart(2, 'Monitor Led Samsung 22', 228799)">Añadir al Carro</button>
+        </div>
+        <div class="product" data-id="2" data-category="moda">
+            <img class="imgf" src="https://http2.mlstatic.com/D_NQ_NP_703018-MLU75242793857_032024-O.webp" alt="Producto 2">
+            <div class="name">Samsung Galaxy Fit3 Pink Gold</div>
+            <div class="price">$145.599</div>
+            <button class="but1" onclick="addToCart(2, 'Samsung Galaxy Fit3 Pink Gold', 145599)">Añadir al Carro</button>
+        </div>
+        <div class="product" data-id="2" data-category="moda">
+            <img class="imgf" src="https://http2.mlstatic.com/D_NQ_NP_837227-MLA76269105445_052024-O.webp" alt="Producto 2">
+            <div class="name">Cámara Digital Samsung Digimax A402 Negra</div>
+            <div class="price">$35.990</div>
+            <button class="but1" onclick="addToCart(2, 'Cámara Digital Samsung Digimax A402 Negra', 35990)">Añadir al Carro</button>
+        </div>
+
+
+    </section>
+        
+    </div>
+
+    <div class="modal" id="loginModal">
+        <span class="close" onclick="closeModal('loginModal')">&times;</span>
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <div>
+                <label for="loginEmail">Correo Electrónico</label>
+                <input type="email" id="loginEmail" required>
+            </div>
+            <div>
+                <label for="loginPassword">Contraseña</label>
+                <input type="password" id="loginPassword" required>
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <div class="modal" id="registerModal">
+        <span class="close" onclick="closeModal('registerModal')">&times;</span>
+        <h2>Registrarse</h2>
+        <form id="registerForm">
+            <div>
+                <label for="registerUsername">Usuario</label>
+                <input type="text" id="registerUsername" required>
+            </div>
+            <div>
+                <label for="registerEmail">Correo Electrónico</label>
+                <input type="email" id="registerEmail" required>
+            </div>
+            <div>
+                <label for="registerPassword">Contraseña</label>
+                <input type="password" id="registerPassword" required>
+            </div>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="footeritem">
+            <a class="items" href="">Contacto</a>
+            <a class="items" href="">Sobre nosotros</a>
+            <a class="items" href="">Soporte</a>
+            <a class="items" href="">Términos y condiciones</a>
+        </div>
+    </div>
+
+
+    <div class="cart" id="cart">
+        <h1 class="carritoo"><span class="material-symbols-outlined">
+            shopping_cart
+            </span></h1>
+        <div id="cartItems"></div>
+        <button class="Pagar" onclick="checkout()">Pagar</button>
+    </div>
+
+
+
+    <script src="scripts.js"></script>
+
+    
+
+
+</body>
+</html>

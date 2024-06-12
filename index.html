@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    
+    
+    
+    
+    
+    <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        </style>
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo"><a href="index.html"><img class="log1" src="img/WhatsApp_Image_2024-06-11_at_14.52.24-removebg-preview.png" alt=""></a></div>
+        
+    
+        <nav class="nav">
+            <a href="#" id="loginButton">Iniciar Sesión</a>
+            <a href="#" id="registerButton">Registrarse</a>
+            <div id="userMenu" class="user-menu" style="display: none;">
+                <span id="welcomeMessage"></span>
+                <div class="dropdown-content">
+                    <a href="#" id="logoutButton">Cerrar Sesión</a>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+  
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Buscar productos...">
+        <button onclick="searchProducts()">Buscar</button>
+    </div>
+
+</header>
+<section class="categories">
+    <h2>Categorías</h2>
+    <div class="category-list">
+        <div id="electro" class="category-item">
+            <button onclick="location.href='Electronica.html'">Electrónica</button>
+        </div>
+        <div id="moda" class="category-item">
+            <button onclick="location.href='Moda.html'">Moda</button>
+        </div>
+        
+        <div id="deporte" class="category-item">
+            <button onclick="location.href='Deporte.html'">Deportes</button>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="product-list">
+        
+        
+        <div class="product-list" id="productList">
+            <div class="product" data-id="1" data-name="SILLA GAMER AUREOX G400 NEGRA Y ROJO" data-category="electronicos">
+                <img class="imgf" src="Nueva carpeta/silla.jpg" alt="Producto 1">
+                <div class="name">SILLA GAMER AUREOX G400 NEGRA Y ROJO</div>
+                <div class="price">$331.000</div>
+                <button class="but1" onclick="addToCart(1, 'SILLA GAMER AUREOX G400 NEGRA Y ROJO', 331.000)">Añadir al Carro</button>
+            </div>
+            <div class="product" data-id="2" data-name="Apple iPhone 11 (128 GB) - Blanco" data-category="electronicos">
+                <img class="imgf" src="Nueva carpeta/ip.webp" alt="Producto 2">
+                <div class="name">Apple iPhone 11 (128 GB) - Blanco</div>
+                <div class="price">$850.000</div>
+                <button class="but1" onclick="addToCart(2, 'Apple iPhone 11 (128 GB) - Blanco', 850.000)">Añadir al Carro</button>
+            </div>
+        <div class="product" data-id="2" data-category="moda">
+            <img class="imgf" src="Nueva carpeta/HT3679_0.jpg" alt="Producto 2">
+            <div class="name">Camiseta River Plate 2024</div>
+            <div class="price">$124.000</div>
+            <button class="but1" onclick="addToCart(2, 'Camiseta River Plate 2024', 124.000)">Añadir al Carro</button>
+        </div>
+        <div class="product" data-id="2" data-category="moda">
+            <img class="imgf" src="Nueva carpeta/m.jpg" alt="Producto 2">
+            <div class="name">Monitor Gaming Samsung Ls27ag550 Odyssey G5 Curvo Negro 27ds</div>
+            <div class="price">$700.000</div>
+            <button class="but1" onclick="addToCart(2, 'Monitor Gaming Samsung Ls27ag550 Odyssey G5 Curvo Negro 27ds', 700.000)">Añadir al Carro</button>
+        </div>
+        <div class="product" data-id="2" data-category="moda">
+            <img class="imgf" src="Nueva carpeta/Dd_NQ_NP_998118-MLA46523924175_062021-O.webp" alt="Producto 2">
+            <div class="name">Neumático Pirelli Formula Energy P 175/70R13 82 T</div>
+            <div class="price">$99.990</div>
+            <button class="but1" onclick="addToCart(2, 'Neumático Pirelli Formula Energy P 175/70R13 82 T', 99.990)">Añadir al Carro</button>
+        </div>
+        <div class="product" data-id="2" data-category="moda">
+            <img class="imgf" src="Nueva carpeta/moto.webp" alt="Producto 2">
+            <div class="name">Honda Xr 250 Patentada</div>
+            <div class="price">$5.878.000</div>
+            <button class="but1" onclick="addToCart(2, 'Honda Xr 250 Patentada', 5878000)">Añadir al Carro</button>
+        </div>
+        <div class="product" data-id="2" data-category="moda">
+            <img class="imgf" src="Nueva carpeta/rh.webp" alt="Producto 2">
+            <div class="name">Campera Inflable super Abrigada Con Capucha</div>
+            <div class="price">$35.990</div>
+            <button class="but1" onclick="addToCart(2, 'Campera Inflable super Abrigada Con Capucha', 35.990)">Añadir al Carro</button>
+        </div>
+        <div class="product" data-id="2" data-category="moda">
+            <img class="imgf" src="Nueva carpeta/rm.webp" alt="Producto 2">
+            <div class="name">Campera Mujer De Frisa Con Piel En El Interior Buzo Moda</div>
+            <div class="price">$18.000</div>
+            <button class="but1" onclick="addToCart(2, 'Campera Mujer De Frisa Con Piel En El Interior Buzo Moda', 18.000)">Añadir al Carro</button>
+        </div>
+        <div class="product" data-id="2" data-category="moda">
+            <img class="imgf" src="Nueva carpeta/s.webp" alt="Producto 2">
+            <div class="name">Zapatillas Dc Shoes Court Graffik Ss</div>
+            <div class="price">$169.000</div>
+            <button class="but1" onclick="addToCart(2, 'Zapatillas Dc Shoes Court Graffik Ss', 169.000)">Añadir al Carro</button>
+        </div>
+        <div class="product" data-id="2" data-category="moda">
+            <img class="imgf" src="Nueva carpeta/c.webp" alt="Producto 2">
+            <div class="name">Cinturón Con Palanca Mecanizada Powerlifting Gym Profesional</div>
+            <div class="price">$224.000</div>
+            <button  onclick="addToCart(2, 'Cinturón Con Palanca Mecanizada Powerlifting Gym Profesional', 224.000)">Añadir al Carro</button>
+        </div>
+
+
+    </section>
+        
+    </div>
+
+    <div class="modal" id="loginModal">
+        <span class="close" onclick="closeModal('loginModal')">&times;</span>
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <div>
+                <label for="loginEmail">Correo Electrónico</label>
+                <input type="email" id="loginEmail" required>
+            </div>
+            <div>
+                <label for="loginPassword">Contraseña</label>
+                <input type="password" id="loginPassword" required>
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <div class="modal" id="registerModal">
+        <span class="close" onclick="closeModal('registerModal')">&times;</span>
+        <h2>Registrarse</h2>
+        <form id="registerForm">
+            <div>
+                <label for="registerUsername">Usuario</label>
+                <input type="text" id="registerUsername" required>
+            </div>
+            <div>
+                <label for="registerEmail">Correo Electrónico</label>
+                <input type="email" id="registerEmail" required>
+            </div>
+            <div>
+                <label for="registerPassword">Contraseña</label>
+                <input type="password" id="registerPassword" required>
+            </div>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="footeritem">
+            <a class="items" href="">Contacto</a>
+            <a class="items" href="">Sobre nosotros</a>
+            <a class="items" href="">Soporte</a>
+            <a class="items" href="">Términos y condiciones</a>
+        </div>
+    </div>
+
+
+    <div class="cart" id="cart">
+        <h1 class="carritoo"><span class="material-symbols-outlined">
+            shopping_cart
+            </span></h1>
+        <div id="cartItems"></div>
+        <button class="Pagar" onclick="checkout()">Pagar</button>
+    </div>
+
+
+
+    <script src="scripts.js"></script>
+
+    
+
+
+</body>
+</html>
